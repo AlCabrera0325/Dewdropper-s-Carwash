@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dewdropper's Carwash</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Dewdropper's Carwash Logo">
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for services...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION MENU -->
+  <nav>
+    <div class="nav-link active" data-target="#home">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </div>
+    <div class="nav-link" data-target="#services">
+      <i class="fas fa-box"></i>
+      <span>Services</span>
+    </div>
+    <div class="nav-link" data-target="#cart">
+      <i class="fas fa-shopping-cart"></i>
+      <span>Cart</span>
+    </div>
+    <div class="nav-link" data-target="#profile">
+      <i class="fas fa-user"></i>
+      <span>Profile</span>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="active">
+    <div class="hero">
+      <img src="images/hero.jpg" alt="Car Wash">
+    </div>
+
+    <h2 class="category-title">Top Categories</h2>
+    <div class="categories">
+      <div class="category">
+        <img src="images/quick-wash.jpg" alt="Quick Wash">
+        <p>Quick Wash</p>
+      </div>
+      <div class="category">
+        <img src="images/interor-detailing.png" alt="Interior Detailing">
+        <p>Interior Detailing</p>
+      </div>
+      <div class="category">
+        <img src="images/wax.jpg" alt="Wax & Polish">
+        <p>Wax & Polish</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/exterior.jpg" alt="Exterior Wash">
+        <div class="service-info">
+          <p class="service-name">Exterior Wash</p>
+          <p class="service-price">₱200</p>
+          <button class="add-to-cart" data-name="Exterior Wash" data-price="200" data-img="images/exterior.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/interior.jpg" alt="Interior Detailing">
+        <div class="service-info">
+          <p class="service-name">Interior Detailing</p>
+          <p class="service-price">₱500</p>
+          <button class="add-to-cart" data-name="Interior Detailing" data-price="500" data-img="images/interior.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/wax2.jpg" alt="Premium Wax">
+        <div class="service-info">
+          <p class="service-name">Premium Wax</p>
+          <p class="service-price">₱700</p>
+          <button class="add-to-cart" data-name="Premium Wax" data-price="700" data-img="images/wax2.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/engine.jpg" alt="Engine Cleaning">
+        <div class="service-info">
+          <p class="service-name">Engine Cleaning</p>
+          <p class="service-price">₱450</p>
+          <button class="add-to-cart" data-name="Engine Cleaning" data-price="450" data-img="images/engine.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="images/ceramic.jpg" alt="Ceramic Coating">
+        <div class="service-info">
+          <p class="service-name">Ceramic Coating</p>
+          <p class="service-price">₱1200</p>
+          <button class="add-to-cart" data-name="Ceramic Coating" data-price="1200" data-img="images/ceramic.jpg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART SECTION -->
+  <section id="cart">
+    <div class="cart-items">
+      <!-- JS will render cart items here -->
+    </div>
+
+    <div class="cart-total">
+      <p>Total: <strong>₱<span id="cart-total-amount">0</span></strong></p>
+      <button id="pay-btn">Pay Now</button>
+    </div>
+  </section>
+
+  <!-- PROFILE SECTION -->
+  <section id="profile">
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <h2 class="profile-name">Al Cabrera</h2>
+        <p class="profile-email">franciscabrera0325@gmail.com</p>
+        <button class="edit-profile-btn">Edit Profile</button>
+      </div>
+
+      <div class="profile-menu">
+        <div class="profile-item">
+          <div class="item-left">
+            <i class="fas fa-receipt"></i>
+            <span>Order History</span>
+          </div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="profile-item">
+          <div class="item-left">
+            <i class="fas fa-bookmark"></i>
+            <span>Saved Items</span>
+          </div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="profile-item">
+          <div class="item-left">
+            <i class="fas fa-credit-card"></i>
+            <span>Payment Methods</span>
+          </div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="profile-item">
+          <div class="item-left">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="profile-item logout">
+          <div class="item-left">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Log Out</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
